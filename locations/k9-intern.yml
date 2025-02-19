@@ -122,6 +122,7 @@ networks:
       k9-ap-loge: 9
       k9-ap-groessenwahn: 10
       k9-ap-iuljan: 11
+      k9ap-41: 12
 
   - vid: 1
     name: k9-dhcp
