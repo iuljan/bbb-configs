@@ -128,6 +128,9 @@ networks:
     name: k9_dhcp
     role: ext
     prefix: 172.17.9.0/24
+    gateway: 1
+    # dns: 1 wie? 172.16.9.5, 172.16.9.126
+    # broadcast: 172.17.9.255
     no_corerouter_dns_record: true
     enforce_client_isolation: false
     # inbound_filtering: true
