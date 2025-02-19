@@ -125,7 +125,7 @@ networks:
       k9ap-41: 12
 
   - vid: 1
-    name: k9-dhcp
+    name: k9_dhcp
     role: ext
     prefix: 172.17.9.0/24
     no_corerouter_dns_record: true
@@ -160,7 +160,7 @@ location__wireless_profiles__to_merge:
         ssid: k9wlan-neu
         encryption: sae-mixed
         key: 'file:/root/k9wlan_wifi_pass' # erst PW ablegen dann flashen
-        network: k9-dhcp
+        network: k9_dhcp
         radio: [11a_standard, 11g_standard]
         ifname_hint: k9
 
