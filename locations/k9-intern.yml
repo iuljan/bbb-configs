@@ -54,7 +54,7 @@ hosts:
         # tag DHCP on all ports
         uci set network.vlan_40.ports='lan1:t lan2:t lan3:t lan4:t lan5:t'
         uci commit network; reload_config
-  - hostname: k9ap-11
+  - hostname: k9ap-41
     role: ap
     model: "dlink_covr-x1860-a1"
     wireless_profile: k9+freifunk
