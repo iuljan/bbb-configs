@@ -132,7 +132,6 @@ networks:
     # assignments:
     #   k9ap-11: 11
 
-
 location__wireless_profiles__to_merge:
   - name: k9+freifunk
     ifaces:
@@ -169,9 +168,7 @@ location__wireless_profiles__to_merge:
         mesh_fwding: 0
         ifname_hint: mesh
 
-# location__channel_assignments_11a_standard__to_merge:
-#   rixbox-nf-nw: 44-20
-
 ssh_keys:
   - comment: k9 iuljan
     key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO0hqsAl0BJGlVgARU0KcE2JD+ljlOJebbFn4NI1aAlQ freifunk-k9@iuljan-m3
+
