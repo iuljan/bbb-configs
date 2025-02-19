@@ -56,7 +56,7 @@ hosts:
         uci commit network; reload_config
   - hostname: k9ap-11
     role: ap
-    model: "dlink_dap-x1860-a1"
+    model: "dlink_covr-x1860-a1"
     wireless_profile: k9+freifunk
 
 snmp_devices:
