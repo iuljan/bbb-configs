@@ -46,7 +46,7 @@ config interface 'loopback'
      or network.get('mesh_ap') == inventory_hostname
      or (role == 'corerouter' and network['role'] == 'uplink' and network.get('uplink_mode') != 'direct')
      %}
-     
+
 config interface '{{ name }}'
 {% if libnetwork.isPortNeeded(network) | from_json %}
     option device '{{ libnetwork.getIfname(network) }}'
@@ -61,15 +61,16 @@ config interface '{{ name }}'
     option proto 'static'
     option ipaddr '{{ network['prefix'] | ansible.utils.ipaddr(network['assignments'][inventory_hostname]) }}'
 
-    {% if role != "corerouter" and 'dns' in network %}
-        {% for dns in network['dns'] %}
-            {% if dns is number %}
-                list dns '{{ network['prefix'] | ansible.utils.ipaddr(dns) | ansible.utils.ipaddr('address') }}'
-            {% else %}
-                list dns '{{ dns }}'
-            {% endif %}
-        {% endfor %}
-    {% endif %}
+{% if role != "corerouter" and 'dns' in network %}
+    {% set dns_list = network['dns'] if network['dns'] is iterable and network['dns'] is not string else [network['dns']] %}
+    {% for dns in dns_list %}
+        {% if dns is number %}
+            list dns '{{ network['prefix'] | ansible.utils.ipaddr(dns) | ansible.utils.ipaddr('address') }}'
+        {% else %}
+            list dns '{{ dns }}'
+        {% endif %}
+    {% endfor %}
+{% endif %}
 
     {% if 'gateway' in network and 'assignments' in network and network['assignments'][inventory_hostname] != network['gateway'] %}
         option gateway '{{ network['prefix'] | ansible.utils.ipaddr(network['gateway']) | ansible.utils.ipaddr('address') }}'
