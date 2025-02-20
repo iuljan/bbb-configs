@@ -178,3 +178,6 @@ ssh_keys:
   - comment: k9 iuljan
     key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO0hqsAl0BJGlVgARU0KcE2JD+ljlOJebbFn4NI1aAlQ freifunk-k9@iuljan-m3
 
+dns_servers:
+- 172.16.9.5
+- 172.16.9.126
