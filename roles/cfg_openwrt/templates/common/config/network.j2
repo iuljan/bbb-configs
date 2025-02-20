@@ -46,24 +46,41 @@ config interface 'loopback'
      or network.get('mesh_ap') == inventory_hostname
      or (role == 'corerouter' and network['role'] == 'uplink' and network.get('uplink_mode') != 'direct')
      %}
+     
 config interface '{{ name }}'
-    {% if libnetwork.isPortNeeded(network) | from_json %}
-	option device '{{ libnetwork.getIfname(network) }}'
+{% if libnetwork.isPortNeeded(network) | from_json %}
+    option device '{{ libnetwork.getIfname(network) }}'
+{% endif %}
+
+{% if network.get('enforce_client_isolation') and role == 'corerouter' and
+   not libnetwork.isBridgeNeeded(network) | from_json %}
+    option macaddr '02:00:00:00:00:01'
+{% endif %}
+
+{% if 'assignments' in network and inventory_hostname in network['assignments'] %}
+    option proto 'static'
+    option ipaddr '{{ network['prefix'] | ansible.utils.ipaddr(network['assignments'][inventory_hostname]) }}'
+
+    {% if role != "corerouter" and 'dns' in network %}
+        {% for dns in network['dns'] %}
+            {% if dns is number %}
+                list dns '{{ network['prefix'] | ansible.utils.ipaddr(dns) | ansible.utils.ipaddr('address') }}'
+            {% else %}
+                list dns '{{ dns }}'
+            {% endif %}
+        {% endfor %}
     {% endif %}
-    {% if network.get('enforce_client_isolation') and role == 'corerouter' and
-       not libnetwork.isBridgeNeeded(network) | from_json %}
-	option macaddr '02:00:00:00:00:01'
+
+    {% if 'gateway' in network and 'assignments' in network and network['assignments'][inventory_hostname] != network['gateway'] %}
+        option gateway '{{ network['prefix'] | ansible.utils.ipaddr(network['gateway']) | ansible.utils.ipaddr('address') }}'
     {% endif %}
-    {% if 'assignments' in network and inventory_hostname in network['assignments'] %}
-	option proto 'static'
-	option ipaddr '{{ network['prefix'] | ansible.utils.ipaddr(network['assignments'][inventory_hostname]) }}'
-       {% if role != "corerouter" and 'dns' in network %}
-	option dns '{{ network['prefix'] | ansible.utils.ipaddr(network['dns']) | ansible.utils.ipaddr('address') }}'
-       {% endif %}
-       {% if 'gateway' in network and 'assignments' in network and network['assignments'][inventory_hostname] != network['gateway'] %}
-	option gateway '{{ network['prefix'] | ansible.utils.ipaddr(network['gateway']) | ansible.utils.ipaddr('address') }}'
-       {% endif %}
-       {% if role != 'corerouter' and 'ipv6_subprefix' in network %}
+
+    {% if 'broadcast' in network %}
+        option broadcast '{{ network['broadcast'] }}'
+    {% endif %}
+
+    {% if role != 'corerouter' and 'ipv6_subprefix' in network %}
+
 
 # IPv6 Address comes via SLAAC and RA. See sysctl, there it is enabled
 # The reason is to get rid of the userspace daemon
