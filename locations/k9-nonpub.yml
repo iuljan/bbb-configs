@@ -55,14 +55,39 @@ hosts:
   #       # tag DHCP on all ports
   #       uci set network.vlan_40.ports='lan1:t lan2:t lan3:t lan4:t lan5:t'
   #       uci commit network; reload_config
-  - hostname: k9ap-31
+  - hostname: k9ap-12  # Anna-lea
     role: ap
     model: "tplink_archer-c7-v5"
-  - hostname: k9ap-40
+    wireless_profile: k9+freifunk
+  - hostname: k9ap-18 # Heinz
+    role: ap
+    model: "cudy_wr3000_v1"
+    wireless_profile: k9+freifunk
+  - hostname: k9ap-31 # SF Kueche
+    role: ap
+    model: "tplink_archer-c7-v5"
+    wireless_profile: k9+freifunk
+  - hostname: k9ap-35 # Katrin
+    role: ap
+    model: "tplink_archer-c7-v5"
+    wireless_profile: k9+freifunk
+  - hostname: k9ap-36 # Ronja
+    role: ap
+    model: "dlink_dap-x1860-a1"
+    wireless_profile: k9+freifunk
+  - hostname: k9ap-37 # Kerrin
+    role: ap
+    model: "dlink_dap-x1860-a1"
+    wireless_profile: k9+freifunk
+  - hostname: k9ap-39 # 5.OG Kueche
+    role: ap
+    model: "dlink_dap-x1860-a1"
+    wireless_profile: k9+freifunk
+  - hostname: k9ap-40 # Hannah
     role: ap
     model: "dlink_covr-x1860-a1"
     wireless_profile: k9+freifunk
-  - hostname: k9ap-41
+  - hostname: k9ap-41 # Percy
     role: ap
     model: "dlink_covr-x1860-a1"
     wireless_profile: k9+freifunk
@@ -146,7 +171,13 @@ networks:
     # inbound_filtering: true
     untagged: true
     assignments:
+      k9ap-12: 12
+      k9ap-18: 18
       k9ap-31: 31
+      k9ap-35: 35
+      k9ap-36: 36
+      k9ap-37: 37
+      k9ap-39: 39
       k9ap-40: 40
       k9ap-41: 41
 
