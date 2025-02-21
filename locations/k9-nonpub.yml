@@ -187,3 +187,5 @@ location__wireless_profiles__to_merge:
 ssh_keys:
   - comment: k9 iuljan
     key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINYwzmfKo1lXqBQFp7Ja26smNf0vMDZ8YTDWos3hO5jZ openwrt-k9@julian-m3
+  - comment: k9 openwrt-vm
+    key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJB+iuUg9LllHVecQ/PybZ4hGAfFwS4NbqU9gpt4TMV2 openwrt-vm
