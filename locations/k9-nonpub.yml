@@ -61,7 +61,7 @@ hosts:
     wireless_profile: k9+freifunk
   - hostname: k9ap-18 # Heinz
     role: ap
-    model: "cudy_wr3000s_v1"
+    model: "cudy_wr3000s-v1"
     wireless_profile: k9+freifunk
   - hostname: k9ap-31 # SF Kueche
     role: ap
