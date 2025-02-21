@@ -152,7 +152,7 @@ location__wireless_profiles__to_merge:
   - name: k9+freifunk
     ifaces:
       - mode: ap
-        ssid: berlin.freifunk.net2
+        ssid: berlin.freifunk.net
         encryption: none
         network: dhcp
         radio: [11a_standard, 11g_standard]
@@ -160,7 +160,7 @@ location__wireless_profiles__to_merge:
         owe_transition_ifname_hint: ffowe
 
       - mode: ap
-        ssid: berlin.freifunk.net Encrypted2
+        ssid: berlin.freifunk.net Encrypted
         hidden: true
         encryption: owe
         network: dhcp
