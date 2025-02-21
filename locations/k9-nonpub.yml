@@ -186,4 +186,4 @@ location__wireless_profiles__to_merge:
 
 ssh_keys:
   - comment: k9 iuljan
-    key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO0hqsAl0BJGlVgARU0KcE2JD+ljlOJebbFn4NI1aAlQ freifunk-k9@iuljan-m3
+    key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINYwzmfKo1lXqBQFp7Ja26smNf0vMDZ8YTDWos3hO5jZ openwrt-k9@julian-m3
