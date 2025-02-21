@@ -146,6 +146,8 @@ networks:
     # inbound_filtering: true
     untagged: true
     assignments:
+      k9ap-31: 31
+      k9ap-40: 40
       k9ap-41: 41
 
 location__wireless_profiles__to_merge:
