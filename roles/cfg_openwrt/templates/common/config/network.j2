@@ -61,22 +61,28 @@ config interface '{{ name }}'
     option proto 'static'
     option ipaddr '{{ network['prefix'] | ansible.utils.ipaddr(network['assignments'][inventory_hostname]) }}'
 
-    {% if role != "corerouter" and 'dns' in network %}
-        {% set dns_list = network['dns'] if network['dns'] is sequence and network['dns'] is not string else [network['dns']] %}
-        {% for dns in dns_list %}
-            {% if dns is number %}
-                list dns '{{ network['prefix'] | ansible.utils.ipaddr(dns) | ansible.utils.ipaddr('address') }}'
-            {% else %}
-                list dns '{{ dns }}'
-            {% endif %}
-        {% endfor %}
-    {% endif %}
+{% if role != "corerouter" and 'dns' in network %}
+    {% set dns_list = network['dns'] if network['dns'] is sequence and network['dns'] is not string else [network['dns']] %}
+    {% for dns in dns_list %}
+        {% if dns is number %}
+            {% set formatted_dns = network['prefix'] | ansible.utils.ipaddr(dns) | ansible.utils.ipaddr('address') %}
+        {% else %}
+            {% set formatted_dns = dns %}
+        {% endif %}
+
+        {% if dns_list | length == 1 %}
+    option dns '{{ formatted_dns }}'
+        {% else %}
+    list dns '{{ formatted_dns }}'
+        {% endif %}
+    {% endfor %}
+{% endif %}
 
 {% if 'gateway' in network and 'assignments' in network and network['assignments'].get(inventory_hostname) != network['gateway'] %}
     {% if network['gateway'] is number %}
-        option gateway '{{ network['prefix'] | ansible.utils.ipaddr(network['gateway']) | ansible.utils.ipaddr('address') }}'
+    option gateway '{{ network['prefix'] | ansible.utils.ipaddr(network['gateway']) | ansible.utils.ipaddr('address') }}'
     {% else %}
-        option gateway '{{ network['gateway'] }}'
+    option gateway '{{ network['gateway'] }}'
     {% endif %}
 {% endif %}
 
@@ -85,7 +91,7 @@ config interface '{{ name }}'
 {% endif %}
 
 
-    {% if role != 'corerouter' and 'ipv6_subprefix' in network %}
+{% if role != 'corerouter' and 'ipv6_subprefix' in network %}
 
 
 # IPv6 Address comes via SLAAC and RA. See sysctl, there it is enabled
