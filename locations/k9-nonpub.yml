@@ -59,6 +59,10 @@ hosts:
     role: ap
     model: "tplink_archer-c7-v5"
     wireless_profile: k9+freifunk
+  - hostname: k9ap-14 # Buero
+    role: ap
+    model: "dlink_dap-x1860-a1"
+    wireless_profile: k9+freifunk
   - hostname: k9ap-18 # Heinz
     role: ap
     model: "cudy_wr3000s-v1"
@@ -172,6 +176,7 @@ networks:
     untagged: true
     assignments:
       k9ap-12: 12
+      k9ap-14: 14
       k9ap-18: 18
       k9ap-31: 31
       k9ap-35: 35
