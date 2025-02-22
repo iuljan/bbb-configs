@@ -9,88 +9,53 @@ contacts:
   - 'freifunk@kinzig9.de'
 
 hosts:
-  # - hostname: k9-core
-  #   role: corerouter
-  #   model: "avm_fritzbox-7530"
-  #   wireless_profile: freifunk_default
-  # - hostname: k9-ap-loge
-  #   role: ap
-  #   model: "aruba_ap-303"
-  #   wireless_profile: freifunk_default
-  # - hostname: k9-ap-groessenwahn
-  #   role: ap
-  #   model: "aruba_ap-303"
-  #   wireless_profile: freifunk_default
-  # - hostname: k9-ap-iuljan
-  #   role: ap
-  #   model: "dlink_dap-x1860-a1"
-  #   wireless_profile: freifunk_default
-  # - hostname: k9-switch-front-house
-  #   role: ap
-  #   model: "ubnt_usw-flex"
-  #   poemgr_ports:
-  #     - name: lan2
-  #       port: 3
-  #       disabled: 1
-  #     - name: lan3  # PoE @ Loge
-  #       port: 2
-  #       disabled: 0
-  #     - name: lan4
-  #       port: 1
-  #       disabled: 1
-  #     - name: lan5
-  #       port: 0
-  #       disabled: 1
-  #   # custom switch config script. Should be applied with a mechanism, that
-  #   # includes files into root files system later on.
-  #   host__rclocal__to_merge:
-  #     - |
-  #       # Remove vlan 10 & 11 (antennas)
-  #       uci delete network.vlan_10
-  #       uci delete network.vlan_11
-  #       uci commit network
-  #       reload_config
-  #       # tag mgmt traffic on ap ports only
-  #       uci set network.vlan_439.ports='lan1:t lan2 lan3:t lan4 lan5:t'
-  #       # tag DHCP on all ports
-  #       uci set network.vlan_40.ports='lan1:t lan2:t lan3:t lan4:t lan5:t'
-  #       uci commit network; reload_config
   - hostname: k9ap-12  # Anna-lea
     role: ap
     model: "tplink_archer-c7-v5"
     wireless_profile: k9+freifunk
+
   - hostname: k9ap-14 # Buero
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
+
   - hostname: k9ap-18 # Heinz
     role: ap
     model: "cudy_wr3000s-v1"
     wireless_profile: k9+freifunk
+
   - hostname: k9ap-31 # SF Kueche
     role: ap
     model: "tplink_archer-c7-v5"
     wireless_profile: k9+freifunk
+    host__packages__to_merge:
+    - "dawn luci-app-dawn umdns"
+
   - hostname: k9ap-35 # Katrin
     role: ap
     model: "tplink_archer-c7-v5"
     wireless_profile: k9+freifunk
+
   - hostname: k9ap-36 # Ronja
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
+
   - hostname: k9ap-37 # Kerrin
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
+
   - hostname: k9ap-39 # 5.OG Kueche
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
+
   - hostname: k9ap-40 # Hannah
     role: ap
     model: "dlink_covr-x1860-a1"
     wireless_profile: k9+freifunk
+
   - hostname: k9ap-41 # Percy
     role: ap
     model: "dlink_covr-x1860-a1"
