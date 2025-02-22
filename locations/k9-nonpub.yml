@@ -115,22 +115,6 @@ ipv6_prefix: '2001:bf7:830:8d00::/56'
 # - 10.31.9.240/28 - MGMT
 
 networks:
-  # # MESH - Sama
-  # - vid: 10
-  #   role: mesh
-  #   name: mesh_sama
-  #   prefix: 10.31.9.224/32
-  #   ipv6_subprefix: -1
-  #   mesh_metric: 128
-
-  # # MESH - Zwingli
-  # - vid: 11
-  #   role: mesh
-  #   name: mesh_zwingli
-  #   prefix: 10.31.9.225/32
-  #   ipv6_subprefix: -2
-  #   mesh_metric: 1024
-  #   mesh_metric_lqm: ['default 0.5']
 
   # DHCP
   - vid: 40
@@ -141,25 +125,6 @@ networks:
     ipv6_subprefix: 0
     assignments:
       k9-core: 1
-
-  # # MGMT
-  # - vid: 439
-  #   role: mgmt
-  #   prefix: 10.31.9.240/28
-  #   gateway: 1
-  #   dns: 1
-  #   ipv6_subprefix: 1
-  #   assignments:
-  #     k9-core: 1
-  #     k9-switch-roof: 2         # uisp-s
-  #     k9-sama: 3                # wave nano
-  #     k9-zwingli: 4
-  #     k9-switch-front-house: 7  # ubiquiti usw-flex-poe
-  #     k9-switch-back-house: 8   # hpe 2520g-poe
-  #     k9-ap-loge: 9
-  #     k9-ap-groessenwahn: 10
-  #     k9-ap-iuljan: 11
-  #     k9ap-41: 12
 
   - vid: 1
     name: k9_dhcp
