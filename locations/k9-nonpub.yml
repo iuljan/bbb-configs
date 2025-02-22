@@ -61,14 +61,6 @@ hosts:
     model: "dlink_covr-x1860-a1"
     wireless_profile: k9+freifunk
 
-snmp_devices:
-  - hostname: k9-sama
-    address: 10.31.9.243
-    snmp_profile: af60
-
-  - hostname: k9-zwingli
-    address: 10.31.9.244
-    snmp_profile: airos_8
 
 ipv6_prefix: '2001:bf7:830:8d00::/56'
 
