@@ -28,8 +28,6 @@ hosts:
     role: ap
     model: "tplink_archer-c7-v5"
     wireless_profile: k9+freifunk
-    host__packages__to_merge:
-    - "dawn luci-app-dawn umdns"
 
   - hostname: k9ap-35 # Katrin
     role: ap
@@ -61,6 +59,8 @@ hosts:
     model: "dlink_covr-x1860-a1"
     wireless_profile: k9+freifunk
 
+location__packages__to_merge:
+  - "dawn luci-app-dawn umdns"
 
 ipv6_prefix: '2001:bf7:830:8d00::/56'
 
