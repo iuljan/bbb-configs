@@ -119,7 +119,10 @@ for FILE_PATH in "${SORTED_FILES[@]}"; do
     echo "Nodename: $NODENAME"
 
     # Build hostname
-    HOSTNAME="$NODENAME.ff"
+    # HOSTNAME="$NODENAME.ff"
+    # Extract the number from the filename (assuming format k9ap-XX.bin)
+    DEVICE_NUMBER=$(echo "$FILENAME" | grep -oP '\d+(?=\.bin)')
+    HOSTNAME="172.17.9.$DEVICE_NUMBER"
     echo "Hostname: $HOSTNAME"
 
     # Check if hostname is accessible
