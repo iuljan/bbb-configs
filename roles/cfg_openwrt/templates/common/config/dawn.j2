@@ -5,7 +5,8 @@ config local
 	option loglevel '0'
 
 config network
-	option broadcast_ip '{{ mgmt_broadcast }}'
+	{% option broadcast_ip '{{ mgmt_broadcast }}' %}
+	option broadcast_ip '{{ network['broadcast'] }}'
 	option broadcast_port '1025'
 	option tcp_port '1026'
 	option network_option '2'
@@ -37,7 +38,8 @@ config metric 'global'
 	option eval_probe_req '0'
 	option eval_auth_req '0'
 	option eval_assoc_req '0'
-	option kicking '3'
+	option kicking '1'
+	{# option kicking '3' #}
 	option kicking_threshold '10'
 	option deny_auth_reason '1'
 	option deny_assoc_reason '17'
