@@ -103,10 +103,10 @@ networks:
       k9ap-31: 31 # SF Kueche
       # k9ap-35: 35 # Katrin
       k9ap-36: 36 # Ronja
-      k9ap-37: 37 # Kerrin
+      # k9ap-37: 37 # Kerrin
       k9ap-39: 39 # 5.OG Kueche
-      k9ap-40: 40 # Percy
-      k9ap-41: 41 # Hannah
+      # k9ap-40: 40 # Hannah
+      k9ap-41: 41 # Percy
 
 location__wireless_profiles__to_merge:
   - name: k9+freifunk
