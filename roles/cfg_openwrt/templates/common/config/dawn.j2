@@ -1,11 +1,11 @@
 {% if wifi_roaming | default(false) %}
-{# {% set network_mgmt = networks | selectattr('role', 'equalto', 'mgmt') | first %} #}
-{3 {% set mgmt_broadcast = network_mgmt['prefix'] | ansible.utils.ipaddr('broadcast') %} #}
+{% set network_mgmt = networks | selectattr('role', 'equalto', 'mgmt') | first %}
+{% set mgmt_broadcast = network_mgmt['prefix'] | ansible.utils.ipaddr('broadcast') %}
 config local
 	option loglevel '0'
 
 config network
-	{% option broadcast_ip '{{ mgmt_broadcast }}' %}
+	{# option broadcast_ip '{{ mgmt_broadcast }}' #}
 	option broadcast_ip '{{ network['broadcast'] }}'
 	option broadcast_port '1025'
 	option tcp_port '1026'
