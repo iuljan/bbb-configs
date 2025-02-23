@@ -18,16 +18,19 @@ hosts:
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
+    wifi_roaming: true
 
   - hostname: k9ap-18 # Heinz
     role: ap
     model: "cudy_wr3000s-v1"
     wireless_profile: k9+freifunk
+    wifi_roaming: true
 
   - hostname: k9ap-31 # SF Kueche
     role: ap
     model: "tplink_archer-c7-v5"
     wireless_profile: k9+freifunk
+    wifi_roaming: true
 
   # - hostname: k9ap-35 # Katrin
   #   role: ap
@@ -59,8 +62,8 @@ hosts:
     model: "dlink_covr-x1860-a1"
     wireless_profile: k9+freifunk
 
-location__packages__to_merge:
-  - "dawn luci-app-dawn umdns"
+# location__packages__to_merge:
+#   - "dawn luci-app-dawn umdns"
 
 ipv6_prefix: '2001:bf7:830:8d00::/56'
 
