@@ -14,7 +14,7 @@ hosts:
   #   model: "tplink_archer-c7-v5"
   #   wireless_profile: k9+freifunk
 
-  - hostname: k9ap-14 # Buero
+  - hostname: k9ap-14 # Luisa
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
@@ -36,6 +36,12 @@ hosts:
   #   role: ap
   #   model: "tplink_archer-c7-v5"
   #   wireless_profile: k9+freifunk
+
+  - hostname: k9ap-34 # Buero
+    role: ap
+    model: "dlink_dap-x1860-a1"
+    wireless_profile: k9+freifunk
+    wifi_roaming: true
 
   - hostname: k9ap-36 # Ronja
     role: ap
@@ -101,9 +107,10 @@ networks:
     untagged: true
     assignments:
       # k9ap-12: 12 # Anna-lea
-      k9ap-14: 14 # Buero
+      k9ap-14: 14 # Luisa
       k9ap-18: 18 # Heinz
       k9ap-31: 31 # SF Kueche
+      k9ap-34: 34 # Buero
       # k9ap-35: 35 # Katrin
       k9ap-36: 36 # Ronja
       # k9ap-37: 37 # Kerrin
