@@ -38,10 +38,11 @@ hosts:
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  # - hostname: k9ap-35 # Katrin
-  #   role: ap
-  #   model: "tplink_archer-c7-v5"
-  #   wireless_profile: k9+freifunk
+  - hostname: k9ap-35 # Katrin
+    role: ap
+    model: "cudy_wr3000h-v1"
+    wireless_profile: k9+freifunk
+    wifi_roaming: true
 
   - hostname: k9ap-34 # Buero
     role: ap
