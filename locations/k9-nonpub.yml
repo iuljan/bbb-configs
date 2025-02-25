@@ -56,10 +56,11 @@ hosts:
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  # - hostname: k9ap-37 # Kerrin
-  #   role: ap
-  #   model: "dlink_dap-x1860-a1"
-  #   wireless_profile: k9+freifunk
+  - hostname: k9ap-37 # Kerrin
+    role: ap
+    model: "dlink_dap-x1860-a1"
+    wireless_profile: k9+freifunk
+    wifi_roaming: true
 
   - hostname: k9ap-39 # 5.OG Kueche
     role: ap
