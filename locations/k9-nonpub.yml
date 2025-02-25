@@ -54,6 +54,7 @@ hosts:
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
+    wifi_roaming: true
 
   # - hostname: k9ap-37 # Kerrin
   #   role: ap
@@ -64,6 +65,7 @@ hosts:
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
+    wifi_roaming: true
 
   # - hostname: k9ap-40 # Hannah
   #   role: ap
@@ -74,6 +76,8 @@ hosts:
     role: ap
     model: "dlink_covr-x1860-a1"
     wireless_profile: k9+freifunk
+    wifi_roaming: true
+
 
 # location__packages__to_merge:
 #   - "dawn luci-app-dawn umdns"
