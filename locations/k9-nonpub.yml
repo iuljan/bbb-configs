@@ -14,11 +14,11 @@ hosts:
   #   model: "tplink_archer-c7-v5"
   #   wireless_profile: k9+freifunk
 
-  - hostname: k9ap-14 # Luisa
-    role: ap
-    model: "dlink_dap-x1860-a1"
-    wireless_profile: k9+freifunk
-    wifi_roaming: true
+  # - hostname: k9ap-14 # Luisa defekt
+  #   role: ap
+  #   model: "dlink_dap-x1860-a1"
+  #   wireless_profile: k9+freifunk
+  #   wifi_roaming: true
 
   - hostname: k9ap-18 # Heinz
     role: ap
@@ -26,11 +26,11 @@ hosts:
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  - hostname: k9ap-24 # G-Raum 1.OG
-    role: ap
-    model: "cudy_wr3000h-v1"
-    wireless_profile: k9+freifunk
-    wifi_roaming: true
+  # - hostname: k9ap-24 # G-Raum 1.OG
+  #   role: ap
+  #   model: "cudy_wr3000h-v1"
+  #   wireless_profile: k9+freifunk
+  #   wifi_roaming: true
 
   - hostname: k9ap-31 # SF Kueche
     role: ap
@@ -38,11 +38,11 @@ hosts:
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  - hostname: k9ap-33 # Kerrin
-    role: ap
-    model: "tplink_archer-c7-v2"
-    wireless_profile: k9+freifunk
-    wifi_roaming: true
+  # - hostname: k9ap-33 # Kerrin
+  #   role: ap
+  #   model: "tplink_archer-c7-v2"
+  #   wireless_profile: k9+freifunk
+  #   wifi_roaming: true
 
   - hostname: k9ap-34 # Buero
     role: ap
@@ -50,11 +50,11 @@ hosts:
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  - hostname: k9ap-35 # Katrin
-    role: ap
-    model: "cudy_wr3000h-v1"
-    wireless_profile: k9+freifunk
-    wifi_roaming: true
+  # - hostname: k9ap-35 # Katrin
+  #   role: ap
+  #   model: "cudy_wr3000h-v1"
+  #   wireless_profile: k9+freifunk
+  #   wifi_roaming: true
 
   - hostname: k9ap-36 # Ronja
     role: ap
@@ -125,13 +125,13 @@ networks:
     untagged: true
     assignments:
       # k9ap-12: 12 # Anna-lea
-      k9ap-14: 14 # Luisa
+      # k9ap-14: 14 # Luisa defekt
       k9ap-18: 18 # Heinz
-      k9ap-24: 24 # 1.OG GRaum
+      # k9ap-24: 24 # 1.OG GRaum
       k9ap-31: 31 # SF Kueche
-      k9ap-33: 33 # Kerrin
+      # k9ap-33: 33 #
       k9ap-34: 34 # Buero
-      k9ap-35: 35 # Katrin
+      # k9ap-35: 35 # Katrin
       k9ap-36: 36 # Ronja
       k9ap-37: 37 # Luisa
       k9ap-39: 39 # 5.OG Kueche
