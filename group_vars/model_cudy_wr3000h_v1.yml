@@ -65,4 +65,4 @@ leds:
     trigger: none
   - name: system
     sysfs: white:status
-    trigger: 'default-on'
+    trigger: default-on
