@@ -32,11 +32,11 @@ hosts:
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  # - hostname: k9ap-24 # G-Raum 1.OG
-  #   role: ap
-  #   model: "cudy_wr3000h-v1"
-  #   wireless_profile: k9+freifunk
-  #   wifi_roaming: true
+  - hostname: k9ap-24 # G-Raum 1.OG
+    role: ap
+    model: "cudy_wr3000h-v1"
+    wireless_profile: k9+freifunk
+    wifi_roaming: true
 
   - hostname: k9ap-31 # SF Kueche
     role: ap
@@ -128,7 +128,7 @@ networks:
       k9ap-13: 13 # Katrin
       # k9ap-14: 14 # Luisa defekt
       k9ap-18: 18 # Heinz
-      # k9ap-24: 24 # 1.OG GRaum
+      k9ap-24: 24 # 1.OG GRaum
       k9ap-31: 31 # SF Kueche
       # k9ap-33: 33 #
       k9ap-34: 34 # Buero
