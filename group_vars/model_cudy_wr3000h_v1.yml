@@ -26,7 +26,7 @@ wireless_devices:
     ifname_hint: wlan2
 
 leds:
-  - name: 2.5G
+  - name: 2_5G
     sysfs: white:wlan-2ghz
     trigger: phy0tpt
   - name: 5G
