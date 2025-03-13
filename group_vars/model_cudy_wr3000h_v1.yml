@@ -17,10 +17,52 @@ wireless_devices:
   - name: 11a_standard
     band: 5g
     htmode_prefix: HE
-    path: platform/18000000.wifi+1
+    path: platform/soc/18000000.wifi+1
     ifname_hint: wlan5
   - name: 11g_standard
     band: 2g
     htmode_prefix: HE
-    path: platform/18000000.wifi
+    path: platform/soc/18000000.wifi
     ifname_hint: wlan2
+
+leds:
+  - name: 2.5G
+    sysfs: white:wlan-2ghz
+    trigger: phy0tpt
+  - name: 5G
+    sysfs: white:wlan-5ghz
+    trigger: phy1tpt
+  - name: wan
+    sysfs: white:wan
+    trigger: netdev
+    dev: wan
+    mode: link tx rx 
+  - name: lan1
+    sysfs: white:lan-1
+    trigger: netdev
+    dev: lan1
+    mode: link tx rx
+  - name: lan2
+    sysfs: white:lan-2
+    trigger: netdev
+    dev: lan2
+    mode: link tx rx
+  - name: lan3
+    sysfs: white:lan-3
+    trigger: netdev
+    dev: lan3
+    mode: link tx rx
+  - name: lan4
+    sysfs: white:lan-4
+    trigger: netdev
+    dev: lan4
+    mode: link tx rx
+  - name: online
+    sysfs: white:wan-online
+    trigger: none
+  - name: wps
+    sysfs: white:wps
+    trigger: none
+  - name: system
+    sysfs: white:status
+    trigger: 'default-on'
