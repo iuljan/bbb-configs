@@ -15,6 +15,7 @@ hosts:
   #   wireless_profile: k9+freifunk
 
   - hostname: k9ap-13 # Katrin
+    description: Katrin
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
