@@ -9,78 +9,106 @@ contacts:
   - 'freifunk@kinzig9.de'
 
 hosts:
-  # - hostname: k9ap-12  # Anna-lea
-  #   role: ap
-  #   model: "tplink_archer-c7-v5"
-  #   wireless_profile: k9+freifunk
+  - hostname: k9ap-10  # Hendrik
+    description: VH3L2R
+    role: ap
+    model: "tplink_archer-c7-v5"
+    wireless_profile: k9+freifunk
+    wifi_roaming: true
+
+  - hostname: k9ap-12  # Anna-lea
+    description: VH1R1R
+    role: ap
+    model: "tplink_archer-c7-v5"
+    wireless_profile: k9+freifunk
+    wifi_roaming: true
 
   - hostname: k9ap-13 # Katrin
-    description: Katrin
+    description: HH2.2
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  # - hostname: k9ap-14 # Luisa defekt
-  #   role: ap
-  #   model: "dlink_dap-x1860-a1"
-  #   wireless_profile: k9+freifunk
-  #   wifi_roaming: true
-
   - hostname: k9ap-18 # Heinz
+    description: SF.1
     role: ap
     model: "cudy_wr3000s-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
   - hostname: k9ap-24 # G-Raum 1.OG
+    description: VH1L2L
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
   - hostname: k9ap-31 # SF Kueche
+    description: SF.2
     role: ap
     model: "tplink_archer-c7-v5"
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  # - hostname: k9ap-33 # Kerrin
-  #   role: ap
-  #   model: "tplink_archer-c7-v2"
-  #   wireless_profile: k9+freifunk
-  #   wifi_roaming: true
+  - hostname: k9ap-33 # ehemals Kerrin
+    description: VH2R2R
+    role: ap
+    model: "tplink_archer-c7-v5"
+    wireless_profile: k9+freifunk
+    wifi_roaming: true
 
   - hostname: k9ap-34 # Buero
+    description: SF.0
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
+  - hostname: k9ap-35 # 4.OG G-Raum
+    description: VH4L2L
+    role: ap
+    model: "cudy_wr3000h-v1"
+    wireless_profile: k9+freifunk
+    wifi_roaming: true
+
   - hostname: k9ap-36 # Ronja
+    description: 5VL2R
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
   - hostname: k9ap-37 # Luisa
+    description: VH2L2R
     role: ap
     model: "dlink_dap-x1860-a1"
+    wireless_profile: k9+freifunk
+    wifi_roaming: true
+
+  - hostname: k9ap-38 # Katja
+    description: VH3R2R
+    role: ap
+    model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
   - hostname: k9ap-39 # 5.OG Kueche
+    description: 5HKUECHE
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  # - hostname: k9ap-40 # Hannah
-  #   role: ap
-  #   model: "dlink_covr-x1860-a1"
-  #   wireless_profile: k9+freifunk
+  - hostname: k9ap-40 # Hannah
+    description: HH4.1
+    role: ap
+    model: "dlink_covr-x1860-a1"
+    wireless_profile: k9+freifunk
+    wifi_roaming: true
 
   - hostname: k9ap-41 # Percy
+    description: HH3.3
     role: ap
     model: "dlink_covr-x1860-a1"
     wireless_profile: k9+freifunk
@@ -125,18 +153,20 @@ networks:
     # inbound_filtering: true
     untagged: true
     assignments:
-      # k9ap-12: 12 # Anna-lea
+      k9ap-10: 10 # Hendrik
+      k9ap-12: 12 # Anna-lea
       k9ap-13: 13 # Katrin
-      # k9ap-14: 14 # Luisa defekt
       k9ap-18: 18 # Heinz
       k9ap-24: 24 # 1.OG GRaum
       k9ap-31: 31 # SF Kueche
-      # k9ap-33: 33 #
+      k9ap-33: 33 # ehemals Kerrin
       k9ap-34: 34 # Buero
+      k9ap-35: 35 # 4.OG G-Raum
       k9ap-36: 36 # Ronja
       k9ap-37: 37 # Luisa
+      k9ap-38: 38 # Katja
       k9ap-39: 39 # 5.OG Kueche
-      # k9ap-40: 40 # Hannah
+      k9ap-40: 40 # Hannah
       k9ap-41: 41 # Percy
 
 location__wireless_profiles__to_merge:
