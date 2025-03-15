@@ -1,6 +1,6 @@
 config system
         option hostname '{{ inventory_hostname }}'
-        option description '{{ inventory_description|default(none) }}'
+        option description '{{ description|default(none) }}'
         option zonename '{{ zonename }}'
         option timezone '{{ timezone }}'
         option ttylogin '0'
