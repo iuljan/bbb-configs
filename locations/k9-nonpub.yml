@@ -19,7 +19,7 @@ hosts:
   - hostname: k9ap-12  # Anna-lea
     description: VH1R1R
     role: ap
-    model: "tplink_archer-c7-v5"
+    model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
@@ -39,6 +39,13 @@ hosts:
 
   - hostname: k9ap-24 # G-Raum 1.OG
     description: VH1L2L
+    role: ap
+    model: "cudy_wr3000h-v1"
+    wireless_profile: k9+freifunk
+    wifi_roaming: true
+
+  - hostname: k9ap-30 # Juergen Schlaf
+    description: VH4R1R
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
