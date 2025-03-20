@@ -44,7 +44,7 @@ hosts:
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  - hostname: k9ap-28 # Mika
+  - hostname: k9ap-28 # Mika klein
     description: 5HR1L
     role: ap
     model: "cudy_wr3000h-v1"
@@ -169,7 +169,7 @@ networks:
       k9ap-13: 13 # Katrin
       k9ap-18: 18 # Heinz
       k9ap-24: 24 # 1.OG GRaum
-      k9ap-31: 28 # Mika
+      k9ap-28: 28 # Mika klein
       k9ap-30: 30 # Juergen Schlaf
       k9ap-31: 31 # SF Kueche
       k9ap-33: 33 # ehemals Kerrin
