@@ -44,7 +44,7 @@ hosts:
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  - hostname: k9ap-29 # Mika
+  - hostname: k9ap-28 # Mika
     description: 5HR1L
     role: ap
     model: "cudy_wr3000h-v1"
