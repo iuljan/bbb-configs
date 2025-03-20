@@ -44,6 +44,13 @@ hosts:
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
+  - hostname: k9ap-29 # Mika
+    description: 5HR1L
+    role: ap
+    model: "cudy_wr3000h-v1"
+    wireless_profile: k9+freifunk
+    wifi_roaming: true
+
   - hostname: k9ap-30 # Juergen Schlaf
     description: VH4R1R
     role: ap
@@ -121,9 +128,6 @@ hosts:
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-
-# location__packages__to_merge:
-#   - "dawn luci-app-dawn umdns"
 
 ipv6_prefix: '2001:bf7:830:8d00::/56'
 
