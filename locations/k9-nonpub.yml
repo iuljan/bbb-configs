@@ -169,6 +169,8 @@ networks:
       k9ap-13: 13 # Katrin
       k9ap-18: 18 # Heinz
       k9ap-24: 24 # 1.OG GRaum
+      k9ap-31: 28 # Mika
+      k9ap-30: 30 # Juergen Schlaf
       k9ap-31: 31 # SF Kueche
       k9ap-33: 33 # ehemals Kerrin
       k9ap-34: 34 # Buero
