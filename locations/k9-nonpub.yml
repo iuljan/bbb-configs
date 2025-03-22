@@ -18,12 +18,12 @@ hosts:
     host__rclocal__to_merge: # reboot at 6 am
       - 'cat /etc/crontabs/root | grep reboot 2>/dev/null || echo "0 6 * * * reboot" >> /etc/crontabs/root && /etc/init.d/cron restart'
 
-  - hostname: k9ap-12  # Anna-lea
-    description: VH1R1R
-    role: ap
-    model: "cudy_wr3000h-v1"
-    wireless_profile: k9+freifunk
-    wifi_roaming: true
+  # - hostname: k9ap-12  # Anna-lea
+  #   description: VH1R1R
+  #   role: ap
+  #   model: "cudy_wr3000h-v1"
+  #   wireless_profile: k9+freifunk
+  #   wifi_roaming: true
 
   - hostname: k9ap-13 # Katrin
     description: HH2.2
