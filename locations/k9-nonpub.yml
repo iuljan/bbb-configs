@@ -39,7 +39,7 @@ hosts:
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  - hostname: k9ap-14 # Buero
+  - hostname: k9ap-14 # Buero neu
     description: SF.0
     role: ap
     model: "cudy_wr3000h-v1"
@@ -196,8 +196,10 @@ networks:
     untagged: true
     assignments:
       k9ap-10: 10 # Hendrik
+      k9ap-11: 11 # 3.OG G-Raum
       k9ap-12: 12 # Anna-lea
       k9ap-13: 13 # Katrin
+      k9ap-14: 14 # Buero neu
       k9ap-18: 18 # Heinz
       k9ap-24: 24 # 1.OG GRaum
       k9ap-28: 28 # Mika klein
