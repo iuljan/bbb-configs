@@ -80,6 +80,8 @@ hosts:
     model: "tplink_archer-c7-v5"
     wireless_profile: k9+freifunk
     wifi_roaming: true
+    host__rclocal__to_merge: # reboot at 6 am
+      - 'cat /etc/crontabs/root | grep reboot 2>/dev/null || echo "0 6 * * * reboot" >> /etc/crontabs/root && /etc/init.d/cron restart'
 
   - hostname: k9ap-33 # ehemals Kerrin
     description: VH2R2R
@@ -114,7 +116,7 @@ hosts:
     wireless_profile: k9+freifunk
     wifi_roaming: true
     host__rclocal__to_merge:
-      - 'cat /etc/crontabs/root | grep reboot 2>/dev/null || echo "0 4 * * * reboot" >> /etc/crontabs/root && /etc/init.d/cron restart'
+      - 'cat /etc/crontabs/root | grep reboot 2>/dev/null || echo "0 6 * * * reboot" >> /etc/crontabs/root && /etc/init.d/cron restart'
 
   - hostname: k9ap-37 # Luisa
     description: VH2L2R
