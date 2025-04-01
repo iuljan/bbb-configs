@@ -45,6 +45,7 @@ hosts:
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
+    reboot: 6
 
   - hostname: k9ap-18 # Heinz
     description: SF.1
