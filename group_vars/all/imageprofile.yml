@@ -30,6 +30,8 @@ all__packages__to_merge:
   - vnstat
   - -ppp
   - -ppp-mod-pppoe
+  - -wpad-basic-mbedtls
+  - wpad-openssl
 
 all_luci_base__packages__to_merge:
   - libiwinfo-lua
