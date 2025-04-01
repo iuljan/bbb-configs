@@ -25,12 +25,12 @@ hosts:
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  # - hostname: k9ap-12  # Anna-lea
-  #   description: VH1R1R
-  #   role: ap
-  #   model: "cudy_wr3000h-v1"
-  #   wireless_profile: k9+freifunk
-  #   wifi_roaming: true
+  - hostname: k9ap-12  # Anna-lea
+    description: VH1R1R
+    role: ap
+    model: "cudy_wr3000h-v1"
+    wireless_profile: k9+freifunk
+    wifi_roaming: true
 
   - hostname: k9ap-13 # Katrin
     description: HH2.2
@@ -60,14 +60,14 @@ hosts:
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  - hostname: k9ap-28 # Mika klein
+  - hostname: k9ap-28 # 5.OG Flur
     description: 5HR1L
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
 
-  - hostname: k9ap-30 # Juergen Schlaf
+  - hostname: k9ap-30 # Anja
     description: VH4R1R
     role: ap
     model: "cudy_wr3000h-v1"
@@ -204,8 +204,8 @@ networks:
       k9ap-14: 14 # Buero neu
       k9ap-18: 18 # Heinz
       k9ap-24: 24 # 1.OG GRaum
-      k9ap-28: 28 # Mika klein
-      k9ap-30: 30 # Juergen Schlaf
+      k9ap-28: 28 # 5.OG Flur
+      k9ap-30: 30 # Anja
       k9ap-31: 31 # SF Kueche
       k9ap-33: 33 # ehemals Kerrin
       k9ap-34: 34 # Buero
