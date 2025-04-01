@@ -1,0 +1,5 @@
+{% if role == 'ap' %}
+{% if reboot_time is defined %}
+0 {{ reboot_time }} * * * reboot
+{% endif %}
+{% endif %}
