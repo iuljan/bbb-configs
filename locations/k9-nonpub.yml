@@ -14,7 +14,7 @@ hosts:
     role: ap
     model: "tplink_archer-c7-v5"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
     reboot_time: 6
 
   - hostname: k9ap-11 # 3.OG G-raum
@@ -22,21 +22,21 @@ hosts:
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
 
   - hostname: k9ap-12  # Anna-lea
     description: VH1R1R
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
 
   - hostname: k9ap-13 # Katrin
     description: HH2.2
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
 
   - hostname: k9ap-14 # Buero neu
     description: SF.0
@@ -51,35 +51,35 @@ hosts:
     role: ap
     model: "cudy_wr3000s-v1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
 
   - hostname: k9ap-24 # G-Raum 1.OG
     description: VH1L2L
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
 
   - hostname: k9ap-28 # 5.OG Flur
     description: 5HR1L
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
 
   - hostname: k9ap-30 # Anja
     description: VH4R1R
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
 
   - hostname: k9ap-31 # SF Kueche
     description: SF.2
     role: ap
     model: "tplink_archer-c7-v5"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
     reboot_time: 6
 
   - hostname: k9ap-33 # ehemals Kerrin
@@ -87,7 +87,7 @@ hosts:
     role: ap
     model: "tplink_archer-c7-v5"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
     reboot_time: 6
 
   - hostname: k9ap-34 # Buero
@@ -95,7 +95,7 @@ hosts:
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
     reboot_time: 6
 
   - hostname: k9ap-35 # 4.OG G-Raum
@@ -103,14 +103,14 @@ hosts:
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
 
   - hostname: k9ap-36 # Ronja
     description: 5VL2R
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
     reboot_time: 6
 
   - hostname: k9ap-37 # Luisa
@@ -118,7 +118,7 @@ hosts:
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
     reboot_time: 6
 
   - hostname: k9ap-38 # Katja
@@ -126,14 +126,14 @@ hosts:
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
 
   - hostname: k9ap-39 # 5.OG Kueche
     description: 5HKUECHE
     role: ap
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
     reboot_time: 6
 
   - hostname: k9ap-40 # Hannah
@@ -141,7 +141,7 @@ hosts:
     role: ap
     model: "dlink_covr-x1860-a1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
     reboot_time: 6
 
   - hostname: k9ap-41 # Percy
@@ -149,7 +149,7 @@ hosts:
     role: ap
     model: "dlink_covr-x1860-a1"
     wireless_profile: k9+freifunk
-    wifi_roaming: true
+    wifi_roaming: false
     reboot_time: 6
 
 ipv6_prefix: '2001:bf7:830:8d00::/56'
