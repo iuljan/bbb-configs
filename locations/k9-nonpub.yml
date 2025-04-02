@@ -15,8 +15,7 @@ hosts:
     model: "tplink_archer-c7-v5"
     wireless_profile: k9+freifunk
     wifi_roaming: true
-    host__rclocal__to_merge: # reboot at 6 am
-      - 'cat /etc/crontabs/root | grep reboot 2>/dev/null || echo "0 6 * * * reboot" >> /etc/crontabs/root && /etc/init.d/cron restart'
+    reboot_time: 6
 
   - hostname: k9ap-11 # 3.OG G-raum
     description: VH3L2L
@@ -81,8 +80,7 @@ hosts:
     model: "tplink_archer-c7-v5"
     wireless_profile: k9+freifunk
     wifi_roaming: true
-    host__rclocal__to_merge: # reboot at 6 am
-      - 'cat /etc/crontabs/root | grep reboot 2>/dev/null || echo "0 6 * * * reboot" >> /etc/crontabs/root && /etc/init.d/cron restart'
+    reboot_time: 6
 
   - hostname: k9ap-33 # ehemals Kerrin
     description: VH2R2R
@@ -90,9 +88,7 @@ hosts:
     model: "tplink_archer-c7-v5"
     wireless_profile: k9+freifunk
     wifi_roaming: true
-    host__rclocal__to_merge: # reboot at 6 am
-      - 'cat /etc/crontabs/root | grep reboot 2>/dev/null || echo "0 6 * * * reboot" >> /etc/crontabs/root && /etc/init.d/cron restart'
-
+    reboot_time: 6
 
   - hostname: k9ap-34 # Buero
     description: SF.0
@@ -100,8 +96,7 @@ hosts:
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
-    host__rclocal__to_merge: # reboot at 6 am
-      - 'cat /etc/crontabs/root | grep reboot 2>/dev/null || echo "0 6 * * * reboot" >> /etc/crontabs/root && /etc/init.d/cron restart'
+    reboot_time: 6
 
   - hostname: k9ap-35 # 4.OG G-Raum
     description: VH4L2L
@@ -116,8 +111,7 @@ hosts:
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
-    host__rclocal__to_merge:
-      - 'cat /etc/crontabs/root | grep reboot 2>/dev/null || echo "0 6 * * * reboot" >> /etc/crontabs/root && /etc/init.d/cron restart'
+    reboot_time: 6
 
   - hostname: k9ap-37 # Luisa
     description: VH2L2R
@@ -125,8 +119,7 @@ hosts:
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
-    host__rclocal__to_merge: # reboot at 6 am
-      - 'cat /etc/crontabs/root | grep reboot 2>/dev/null || echo "0 6 * * * reboot" >> /etc/crontabs/root && /etc/init.d/cron restart'
+    reboot_time: 6
 
   - hostname: k9ap-38 # Katja
     description: VH3R2R
@@ -141,8 +134,7 @@ hosts:
     model: "dlink_dap-x1860-a1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
-    host__rclocal__to_merge: # reboot at 6 am
-      - 'cat /etc/crontabs/root | grep reboot 2>/dev/null || echo "0 6 * * * reboot" >> /etc/crontabs/root && /etc/init.d/cron restart'
+    reboot_time: 6
 
   - hostname: k9ap-40 # Hannah
     description: HH4.1
@@ -150,8 +142,7 @@ hosts:
     model: "dlink_covr-x1860-a1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
-    host__rclocal__to_merge: # reboot at 6 am
-      - 'cat /etc/crontabs/root | grep reboot 2>/dev/null || echo "0 6 * * * reboot" >> /etc/crontabs/root && /etc/init.d/cron restart'
+    reboot_time: 6
 
   - hostname: k9ap-41 # Percy
     description: HH3.3
@@ -159,9 +150,7 @@ hosts:
     model: "dlink_covr-x1860-a1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
-    host__rclocal__to_merge: # reboot at 6 am
-      - 'cat /etc/crontabs/root | grep reboot 2>/dev/null || echo "0 6 * * * reboot" >> /etc/crontabs/root && /etc/init.d/cron restart'
-
+    reboot_time: 6
 
 ipv6_prefix: '2001:bf7:830:8d00::/56'
 
