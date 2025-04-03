@@ -57,24 +57,12 @@ for FILE_PATH in "${SORTED_FILES[@]}"; do
     echo "- $(basename "$FILE_PATH")"
 done
 echo ""
-read -rp "Do you want to proceed now or later [y/N/l]? " choice
+read -rp "Do you want to proceed [y/N]? " choice
 echo ""
-if [[ "$choice" =~ ^[Ll]$ ]]; then
-    read -rp "Enter the number of seconds to sleep: " seconds
-    if [[ "$seconds" =~ ^[0-9]+$ ]]; then
-        echo "Sleeping for $seconds seconds..."
-        sleep "$seconds"
-    else
-        echo "Invalid input. Exiting..."
-        exit 1
-    fi
-elif [[ ! "$choice" =~ ^[Yy]$ ]]; then
+if [[ ! "$choice" =~ ^[Yy]$ ]]; then
     echo "Exiting..."
     exit 0
 fi
-
-echo "Proceeding..."
-
 
 # Function to check reachability
 check_reachability() {
