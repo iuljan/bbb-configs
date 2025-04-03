@@ -46,6 +46,14 @@ hosts:
     wifi_roaming: true
     reboot_time: 6
 
+  - hostname: k9ap-16 # dawn testbed
+    description: dawn testbed
+    role: ap
+    model: "cudy_wr3000h-v1"
+    wireless_profile: k9+freifunk
+    wifi_roaming: true
+    # reboot_time: 6
+
   - hostname: k9ap-18 # Heinz
     description: SF.1
     role: ap
@@ -192,6 +200,7 @@ networks:
       k9ap-12: 12 # Anna-lea
       k9ap-13: 13 # Katrin
       k9ap-14: 14 # Buero neu
+      k9ap-16: 15 # DAWN testbed
       k9ap-18: 18 # Heinz
       k9ap-24: 24 # 1.OG GRaum
       k9ap-28: 28 # 5.OG Flur
