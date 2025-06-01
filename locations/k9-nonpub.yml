@@ -23,6 +23,7 @@ hosts:
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: false
+    reboot_time: 6
 
   - hostname: k9ap-12  # Anna-lea
     description: VH1R1R
@@ -30,6 +31,7 @@ hosts:
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: false
+    reboot_time: 6
 
   - hostname: k9ap-13 # Katrin
     description: HH2.2
@@ -37,6 +39,7 @@ hosts:
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: false
+    reboot_time: 6
 
   - hostname: k9ap-14 # Buero neu
     description: SF.0
@@ -46,13 +49,21 @@ hosts:
     wifi_roaming: true
     reboot_time: 6
 
+  - hostname: k9ap-15 # Terasse
+    description: 5HR2L
+    role: ap
+    model: "dlink_dap-x1860-a1"
+    wireless_profile: k9+freifunk
+    wifi_roaming: false
+    reboot_time: 6
+
   - hostname: k9ap-16 # dawn testbed
     description: dawn testbed
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: true
-    # reboot_time: 6
+    reboot_time: 6
 
   - hostname: k9ap-18 # Heinz
     description: SF.1
@@ -60,6 +71,7 @@ hosts:
     model: "cudy_wr3000s-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: false
+    reboot_time: 6
 
   - hostname: k9ap-24 # G-Raum 1.OG
     description: VH1L2L
@@ -67,6 +79,15 @@ hosts:
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: false
+    reboot_time: 6
+
+  - hostname: k9ap-27 # backup
+    description: backup
+    role: ap
+    model: "cudy_wr3000h-v1"
+    wireless_profile: k9+freifunk
+    wifi_roaming: false
+    reboot_time: 6
 
   - hostname: k9ap-28 # 5.OG Flur
     description: 5HR1L
@@ -74,6 +95,7 @@ hosts:
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: false
+    reboot_time: 6
 
   - hostname: k9ap-30 # Anja
     description: VH4R1R
@@ -81,6 +103,7 @@ hosts:
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: false
+    reboot_time: 6
 
   - hostname: k9ap-31 # SF Kueche
     description: SF.2
@@ -106,12 +129,13 @@ hosts:
     wifi_roaming: false
     reboot_time: 6
 
-  - hostname: k9ap-35 # 4.OG G-Raum
+  - hostname: k9ap-35 # 4.OG Küche
     description: VH4L2L
     role: ap
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: false
+    reboot_time: 6
 
   - hostname: k9ap-36 # Ronja
     description: 5VL2R
@@ -135,6 +159,7 @@ hosts:
     model: "cudy_wr3000h-v1"
     wireless_profile: k9+freifunk
     wifi_roaming: false
+    reboot_time: 6
 
   - hostname: k9ap-39 # 5.OG Kueche
     description: 5HKUECHE
@@ -200,9 +225,11 @@ networks:
       k9ap-12: 12 # Anna-lea
       k9ap-13: 13 # Katrin
       k9ap-14: 14 # Buero neu
+      k9ap-15: 15 # Terasse
       k9ap-16: 16 # DAWN testbed
       k9ap-18: 18 # Heinz
       k9ap-24: 24 # 1.OG GRaum
+      k9ap-27: 27 # Backup
       k9ap-28: 28 # 5.OG Flur
       k9ap-30: 30 # Anja
       k9ap-31: 31 # SF Kueche
