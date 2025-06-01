@@ -1,6 +1,6 @@
 ---
 
-#freifunk_global_prefix -> has been migrated to group_vars/all/general.yml
+# freifunk_global_prefix -> has been migrated to group_vars/all/general.yml
 freifunk_wahlkreis_prefixes:
   - 2001:bf7:750::/44
   - 2001:bf7:760::/44
@@ -37,7 +37,7 @@ wireguard_wg_pub: '/etc/wireguard/wg.pub'
 # If it is set wireguard_wg_key and wireguard_wg_pub are not used.
 wireguard_wg_tmp_key: false
 
-gre_metric: 256 # Match default RX Cost
+gre_metric: 256  # Match default RX Cost
 
 
 ## FIREWALL SECTION
@@ -84,10 +84,6 @@ inbound_allow:
     dst: 2001:bf7:830:9d00::/128
     proto: tcp
     dst_port: 22
-  - name: 'prometheus-poc'
-    proto: tcp
-    src: 2a04:d480:2c02:b::/64
-    dst_port: 9100
   - name: 'scherer8-wetter'
     dst: '2001:bf7:750:2e00::10/128'
     proto: tcp
@@ -98,10 +94,16 @@ inbound_allow:
     dst: 2001:bf7:830:1029::/64
   - name: 'cryptpad.berlin noc@stadtfunk.net'
     dst: 2001:bf7:750:5b00::/128
-  - name: 'radbahn mt76 testing'
-    dst: 2001:bf7:830:c000::/56
+  - name: 'newyorck-homelab newyorck@so36.net'
+    dst: 2001:bf7:830:a92b::2/128
+    proto: tcp
+    dst_port: 22
   - name: 'gub37-core local public network'
     dst: 2001:bf7:830:a7ce::1/64
+  - name: 'magda-core PubDHCP SSH'
+    dst: 2001:bf7:860:2::/64
+    proto: tcp
+    dst_port: 22
 #  - name: Rule Description (mandatory)
 #    dst: Destination IP (mandatory)
 #    src: Source IP

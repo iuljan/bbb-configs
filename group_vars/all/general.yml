@@ -1,7 +1,6 @@
 ---
 zonename: 'Europe/Berlin'
 timezone: 'CET-1CEST,M3.5.0,M10.5.0/3'
-log_size: 64
 
 # TODO: find a second good DNS upstream in Berlin
 dns_servers:
@@ -54,5 +53,5 @@ mesh_metric_default_in: 512
 mesh_metric_tunnel_in: 3072
 
 # Default mesh metrics in inbound direction (rxcost) for adhoc like interfaces
-mesh_metric_adhoc_11a_standard: 2024
-mesh_metric_adhoc_11g_standard: 2536
+mesh_metric_adhoc_11a_standard: 2048
+mesh_metric_adhoc_11g_standard: 2560
