@@ -113,7 +113,7 @@ hosts:
     wifi_roaming: false
     reboot_time: 6
 
-  - hostname: k9ap-33 # ehemals Kerrin
+  - hostname: k9ap-33 # Jaz Büro
     description: VH2R2R
     role: ap
     model: "tplink_archer-c7-v5"
@@ -121,13 +121,13 @@ hosts:
     wifi_roaming: false
     reboot_time: 6
 
-  - hostname: k9ap-34 # Buero
-    description: SF.0
-    role: ap
-    model: "dlink_dap-x1860-a1"
-    wireless_profile: k9+freifunk
-    wifi_roaming: false
-    reboot_time: 6
+  # - hostname: k9ap-34 # Buero
+  #   description: SF.0
+  #   role: ap
+  #   model: "dlink_dap-x1860-a1"
+  #   wireless_profile: k9+freifunk
+  #   wifi_roaming: false
+  #   reboot_time: 6
 
   - hostname: k9ap-35 # 4.OG Küche
     description: VH4L2L
@@ -153,7 +153,7 @@ hosts:
     wifi_roaming: false
     reboot_time: 6
 
-  - hostname: k9ap-38 # Katja
+  - hostname: k9ap-38 # Darleen
     description: VH3R2R
     role: ap
     model: "cudy_wr3000h-v1"
@@ -233,12 +233,12 @@ networks:
       k9ap-28: 28 # 5.OG Flur
       k9ap-30: 30 # Anja
       k9ap-31: 31 # SF Kueche
-      k9ap-33: 33 # ehemals Kerrin
-      k9ap-34: 34 # Buero
+      k9ap-33: 33 # Jaz Büro
+      # k9ap-34: 34 # Buero
       k9ap-35: 35 # 4.OG G-Raum
       k9ap-36: 36 # Ronja
       k9ap-37: 37 # Luisa
-      k9ap-38: 38 # Katja
+      k9ap-38: 38 # Darleen
       k9ap-39: 39 # 5.OG Kueche
       k9ap-40: 40 # Hannah
       k9ap-41: 41 # Percy
